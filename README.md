@@ -13,6 +13,7 @@ MyOtherApi::Client::Customer.set_test_results([some data...], {<some conditions.
 MyOtherApi::Client::Customer.set_test_results([some data...], {<some conditions...>)
 MyOtherApi::Client::Customer.set_test_results([some data...], {<some conditions...>)
 ```
+
 Placing this anywhere is ugly and time consuming.
 
 MockingBird attempts to combine this into a more fixture-like convention by using the file structure of your
@@ -163,7 +164,7 @@ MockingBird can generate template structures for your mocks
 #      PATH/NAME/CLASS_NAME/update.yml
 #      PATH/NAME/CLASS_NAME/delete.yml
 
-#  PATH defaults to 'test/mocks'
+#  PATH defaults to test/mocks
 ```
 
 ## TODO
@@ -177,7 +178,8 @@ MockingBird can generate template structures for your mocks
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
-=======
+
+============
 mocking_bird
 ============
 
