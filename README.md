@@ -34,100 +34,100 @@ Or install it yourself as:
 
 ## Usage
 
-  #### File System Structure
+#### File System Structure
 
-                      In your mock directory you would create the following structure:
+                    In your mock directory you would create the following structure:
 
-                      ```
-                      |
-                      |-mocks
-                        |-my_api
-                          |-customer
+                    ```
+                    |
+                    |-mocks
+                      |-my_api
+                        |-customer
+                          create.yml
+                          delete.yml
+                          read.yml
+                          update.yml
+                        |-user
+                          create.yml
+                          delete.yml
+                          read.yml
+                          update.yml
+                      |-my_other_api
+                          |-order
                             create.yml
                             delete.yml
                             read.yml
                             update.yml
-                          |-user
+                          |-invocie
                             create.yml
                             delete.yml
-                            read.yml
-                            update.yml
-                        |-my_other_api
-                            |-order
-                              create.yml
-                              delete.yml
-                              read.yml
-                              update.yml
-                            |-invocie
-                              create.yml
-                              delete.yml
-          read.yml
-          update.yml
-  ```
+        read.yml
+        update.yml
+```
 
-  This will load mocks for `MyApi::Client::Customer, MyApi::Client::User, MyOtherApi::Client::Order, and MyOtherApi::Client::Invoice`
-  The mock files are grouped by action, but you can name them anything and they will be accessible by this actions(shown later).
+This will load mocks for `MyApi::Client::Customer, MyApi::Client::User, MyOtherApi::Client::Order, and MyOtherApi::Client::Invoice`
+The mock files are grouped by action, but you can name them anything and they will be accessible by this actions(shown later).
 
-  ### currently only YAMl files are accepted, with JSON coming soon.
+### currently only YAMl files are accepted, with JSON coming soon.
 
-  #### Mock File Structure
+#### Mock File Structure
 
-  The file structure for each mock file is:
+The file structure for each mock file is:
 
-  ```yaml
-  # user/create.yml
-  <mock_name>:
-    conditions:
-        name: 'test_uers'
-      response:
-        id: 1
-        name: 'test_uers'
-  ```
-
-  Example:
-
-  ```yaml
-  # my_api/users/create.yml
-  test_user:
-    conditions:
+```yaml
+# user/create.yml
+<mock_name>:
+  conditions:
       name: 'test_uers'
-      contact: 'test user'
-      email_address: 'test@test.com'
-      phone_number: '2062222222'
-      address_id: nil
-      credit_cards: []
-      address:
-        address_line1: '111 test ave'
-        addresS_line2: ''
-        city: 'Seattle'
-        state: 'WA'
-        count: nil
-        postal_code: '98109'
     response:
       id: 1
       name: 'test_uers'
-      contact: 'test user'
-      email_address: 'test@test.com'
-      phone_number: '2062222222'
-      address_id: nil
-      credit_cards: []
-      address:
-        id: 1
-        address_line1: '111 test ave'
-        addresS_line2: ''
-        city: 'Seattle'
-        state: 'WA'
-        count: nil
-        postal_code: '98109'
-  ```
+```
 
-  #### Building the mocks
+Example:
 
-  Setting up the mocks is done by calling
+```yaml
+# my_api/users/create.yml
+test_user:
+  conditions:
+    name: 'test_uers'
+    contact: 'test user'
+    email_address: 'test@test.com'
+    phone_number: '2062222222'
+    address_id: nil
+    credit_cards: []
+    address:
+      address_line1: '111 test ave'
+      addresS_line2: ''
+      city: 'Seattle'
+      state: 'WA'
+      count: nil
+      postal_code: '98109'
+  response:
+    id: 1
+    name: 'test_uers'
+    contact: 'test user'
+    email_address: 'test@test.com'
+    phone_number: '2062222222'
+    address_id: nil
+    credit_cards: []
+    address:
+      id: 1
+      address_line1: '111 test ave'
+      addresS_line2: ''
+      city: 'Seattle'
+      state: 'WA'
+      count: nil
+      postal_code: '98109'
+```
 
-  ```ruby
-  MockingBird::setup_mocks(:path => Rails.root.join('test','mocks')
-  ```
+#### Building the mocks
+
+Setting up the mocks is done by calling
+
+```ruby
+MockingBird::setup_mocks(:path => Rails.root.join('test','mocks')
+```
 
 ## Contributing
 
