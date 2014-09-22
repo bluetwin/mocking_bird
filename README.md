@@ -68,7 +68,7 @@ In your mock directory you would create the following structure:
 This will load mocks for `MyApi::Client::Customer, MyApi::Client::User, MyOtherApi::Client::Order, and MyOtherApi::Client::Invoice`
 The mock files are grouped by action, but you can name them anything and they will be accessible by this actions(shown later).
 
-### currently only YAMl files are accepted, with JSON coming soon.
+**currently only YAMl files are accepted, with JSON coming soon.**
 
 #### Mock File Structure
 
@@ -121,7 +121,7 @@ test_user:
       postal_code: '98109'
 ```
 
-*Note:* MockingBird looks for `conditions:` and `:results` to set up the mocks properly. It will fail without them.
+**Note:** MockingBird looks for `conditions:` and `:results` to set up the mocks properly. It will fail without them.
 
 
 #### Building the mocks
@@ -134,7 +134,7 @@ MockingBird::setup_mocks(:path => Rails.root.join('test','mocks')
 
 #### Fetching mock data
 
-Fetching the conditions and results you've set up is done by calling on MockingBird:
+Fetching the conditions and results you've set up is done by calling on MockingBird::Mocker:
 
 ```ruby
 # get the test user mock
