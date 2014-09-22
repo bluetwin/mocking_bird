@@ -152,18 +152,18 @@ MockingBird can generate template structures for your mocks
 
 ``` ruby
 # Description:
-  Builds the directory structure for loaded mocks with basic CRUD YAMl files.
+# Builds the directory structure for loaded mocks with basic CRUD YAMl files.
 
 # Example:
   rails generate mocking_bird NAME [KLASS] [PATH] [options]
 
-  This will create:
-      PATH/NAME/CLASS_NAME/create.yml
-      PATH/NAME/CLASS_NAME/read.yml
-      PATH/NAME/CLASS_NAME/update.yml
-      PATH/NAME/CLASS_NAME/delete.yml
+#  This will create:
+#      PATH/NAME/CLASS_NAME/create.yml
+#      PATH/NAME/CLASS_NAME/read.yml
+#      PATH/NAME/CLASS_NAME/update.yml
+#      PATH/NAME/CLASS_NAME/delete.yml
 
-  PATH defaults to 'test/mocks'
+#  PATH defaults to 'test/mocks'
 ```
 
 ## TODO
