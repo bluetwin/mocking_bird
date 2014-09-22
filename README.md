@@ -131,6 +131,7 @@ Setting up the mocks is done by calling
 ```ruby
 MockingBird::setup_mocks(:path => Rails.root.join('test','mocks')
 ```
+with path to your mocks directory setup as described above.
 
 #### Fetching mock data
 
