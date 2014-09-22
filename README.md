@@ -146,6 +146,24 @@ MockingBird::Mocker.my_api.user.create.test_user
 MockingBird::Mocker.my_other_api.invoice.create.invoice_1
 ```
 
+#### Generating mocking_bird files
+
+MockingBird can generate template structures for your mocks
+
+##### Description:
+  Builds the directory structure for loaded mocks with basic CRUD YAMl files.
+
+##### Example:
+  rails generate mocking_bird NAME [KLASS] [PATH] [options]
+
+  This will create:
+      PATH/NAME/CLASS_NAME/create.yml
+      PATH/NAME/CLASS_NAME/read.yml
+      PATH/NAME/CLASS_NAME/update.yml
+      PATH/NAME/CLASS_NAME/delete.yml
+
+  PATH defaults to 'test/mocks'
+
 ## TODO
 - Add support to fetch from a service and load mocks from a sandbox endpoint
 - Add json support
