@@ -36,31 +36,31 @@ Or install it yourself as:
 
 #### File System Structure
 
-                    In your mock directory you would create the following structure:
+In your mock directory you would create the following structure:
 
-                    ```
-                    |
-                    |-mocks
-                      |-my_api
-                        |-customer
-                          create.yml
-                          delete.yml
-                          read.yml
-                          update.yml
-                        |-user
-                          create.yml
-                          delete.yml
-                          read.yml
-                          update.yml
-                      |-my_other_api
-                          |-order
-                            create.yml
-                            delete.yml
-                            read.yml
-                            update.yml
-                          |-invocie
-                            create.yml
-                            delete.yml
+```
+|
+|-mocks
+  |-my_api
+    |-customer
+      create.yml
+      delete.yml
+      read.yml
+      update.yml
+    |-user
+      create.yml
+      delete.yml
+      read.yml
+      update.yml
+  |-my_other_api
+      |-order
+        create.yml
+        delete.yml
+        read.yml
+        update.yml
+      |-invocie
+        create.yml
+        delete.yml
         read.yml
         update.yml
 ```
