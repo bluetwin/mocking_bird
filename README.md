@@ -79,7 +79,7 @@ The file structure for each mock file is:
 <mock_name>:
   conditions:
       name: 'test_uers'
-    response:
+    results:
       id: 1
       name: 'test_uers'
 ```
