@@ -24,7 +24,7 @@ module MockingBird
       objects = YAML::load_file(@file)
       objects = objects.with_indifferent_access if objects.present?
       Hash(objects|| nil).each do |k,v|
-        @mock_set[k.to_sym] = @klass.set_test_results(v[:response],v[:conditions]).first if v[:response] && v[:conditions]
+        @mock_set[k.to_sym] = @klass.set_test_results(v[:results],v[:conditions]).first if v[:results] && v[:conditions]
       end
       @mock_set
     end

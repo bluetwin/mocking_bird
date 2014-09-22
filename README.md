@@ -103,7 +103,7 @@ test_user:
       state: 'WA'
       count: nil
       postal_code: '98109'
-  response:
+  results:
     id: 1
     name: 'test_uers'
     contact: 'test user'
@@ -121,12 +121,28 @@ test_user:
       postal_code: '98109'
 ```
 
+*Note:* MockingBird looks for `conditions:` and `:results` to set up the mocks properly. It will fail without them.
+
+
 #### Building the mocks
 
 Setting up the mocks is done by calling
 
 ```ruby
 MockingBird::setup_mocks(:path => Rails.root.join('test','mocks')
+```
+
+#### Fetching mock data
+
+Fetching the conditions and results you've set up is done by calling on MockingBird:
+
+```ruby
+# get the test user mock
+MockingBird::Mocker.my_api.user.create.test_user
+# Hash (2 element(s))
+#   conditions => <HashWithIndifferntAccess> - your conditions for test_user in create.yml file
+#   results    => <HashWithIndifferntAccess> - your results for test_user in create.yml file
+MockingBird::Mocker.my_other_api.invoice.create.invoice_1
 ```
 
 ## Contributing
