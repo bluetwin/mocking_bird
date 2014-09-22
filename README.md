@@ -146,6 +146,10 @@ MockingBird::Mocker.my_api.user.create.test_user
 MockingBird::Mocker.my_other_api.invoice.create.invoice_1
 ```
 
+## TODO
+- Add support to fetch from a service and load mocks from a sandbox endpoint
+- Add json support
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/mocking_bird/fork )

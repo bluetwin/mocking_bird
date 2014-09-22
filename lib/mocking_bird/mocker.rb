@@ -13,12 +13,17 @@ module MockingBird
 
       def load_mocks
         Dir.entries(@path).each do |dir|
-
           full_path = File.join(@path,dir)
           if File.directory?(full_path) && dir != ".." && dir != "."
             flock = Flock.new(full_path)
             @flocks[flock.service.downcase.to_sym] = flock
           end
+        end
+      end
+
+      def clear_mocks
+        @flock.values do |flock|
+          flock.clear_test_results
         end
       end
 

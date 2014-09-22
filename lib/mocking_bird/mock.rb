@@ -10,7 +10,6 @@ module MockingBird
       load_mock if @file.present?
     end
 
-
     private
 
     def load_mock

@@ -18,6 +18,10 @@ module MockingBird
       @client_klass ||= "#{@service}::Client::#{@klass}".constantize
     end
 
+    def clear_tests
+      client_klass.clear_test_results
+    end
+
     private
 
     def load_actions

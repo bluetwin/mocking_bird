@@ -10,6 +10,12 @@ module MockingBird
       load if @path.present?
     end
 
+    def clear_tests
+      @birds.values do |bird|
+        bird.clear_tests
+      end
+    end
+
     private
 
     def load
