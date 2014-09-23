@@ -33,9 +33,9 @@ module MockingBird
     end
 
     def method_missing(method, *args, &block)
-      if match = method.to_s.match(/^(.*)=$/)
+      if method.to_s.match(/^(.*)=$/)
         raise NoMethodError
-      elsif bird = has_bird?(method)
+      elsif has_bird?(method)
         @birds[method]
       else
         raise NoMethodError

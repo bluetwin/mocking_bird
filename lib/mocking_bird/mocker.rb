@@ -22,7 +22,7 @@ module MockingBird
       end
 
       def clear_mocks
-        @flock.values do |flock|
+        @flocks.values do |flock|
           flock.clear_test_results
         end
       end
@@ -34,7 +34,7 @@ module MockingBird
       end
 
       def method_missing(method, *args, &block)
-        if match = method.to_s.match(/^(.*)=$/)
+        if method.to_s.match(/^(.*)=$/)
           super
         elsif has_flock?(method)
           @flocks[method]
